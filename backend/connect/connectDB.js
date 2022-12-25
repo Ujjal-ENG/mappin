@@ -1,7 +1,6 @@
-import mongoose from "mongoose";
-import * as dotenv from "dotenv";
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 dotenv.config();
-
 
 mongoose.set("strictQuery", false);
 const connect = async () => {
@@ -10,4 +9,4 @@ const connect = async () => {
   });
 };
 
-export { connect };
+module.exports = connect;
